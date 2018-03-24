@@ -10,6 +10,12 @@ public class Applications : MonoBehaviour {
 	public GameObject poopFallerApp;
 	public PoopFaller poopFaller;
 	public GameObject telephoneApp;
+	public AudioClip click;
+	public AudioSource audioSource;
+
+	void OnEnable () {
+		audioSource.clip = click;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,12 +29,12 @@ public class Applications : MonoBehaviour {
 			finderApp.SetActive (true);
 			finder.StartApplication ();
 			homeScreen.SetActive (false);
+			audioSource.Play ();
 		} else if (moveX > 0) {
             poopFallerApp.SetActive(true);
             poopFaller.StartApplication();
             homeScreen.SetActive(false);
-
-            Debug.Log ("RIGHT");
+			audioSource.Play ();
 		}
 	}
 }
