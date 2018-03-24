@@ -18,7 +18,7 @@ public class StatusBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		seconds += Time.deltaTime * 60;
+		seconds += Time.deltaTime * 15;
 		if (seconds > 59) {
 			minutes++;
 			seconds = 0f;
