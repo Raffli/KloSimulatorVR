@@ -1259,6 +1259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 521077106}
   - component: {fileID: 521077108}
+  - component: {fileID: 521077109}
   m_Layer: 5
   m_Name: PoopFallerApp
   m_TagString: Untagged
@@ -1290,7 +1291,89 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1581058206}
   music: {fileID: 8300000, guid: d8c2c1deb9a92d74a92906ac0f294477, type: 3}
   poopDead: {fileID: 8300000, guid: c76a1f39166b4444999b333ea5c20683, type: 3}
+  poopSwipe: {fileID: 8300000, guid: 9081fa3b864561a40b2cd2b9535d9a49, type: 3}
   audioSource: {fileID: 846249882}
+  gameAudioSource: {fileID: 521077109}
+--- !u!82 &521077109
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 521077107}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &521275617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,6 +1401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d748633379e334ca2080d22390f72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chainPart: {fileID: 0}
+  handle: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!4 &521275620
 Transform:
   m_ObjectHideFlags: 0
@@ -6657,6 +6743,9 @@ MonoBehaviour:
   contactName: {fileID: 1279030127}
   callDuration: {fileID: 1019215177}
   callingPanel: {fileID: 583562486}
+  freizeichen: {fileID: 8300000, guid: 04bfc2ef38759b142983e045a6765a5d, type: 3}
+  telefonatMama: {fileID: 8300000, guid: 38c3ac9c3e3af7446908ac30109d0672, type: 3}
+  audioSource: {fileID: 846249882}
 --- !u!1 &2091269862
 GameObject:
   m_ObjectHideFlags: 0

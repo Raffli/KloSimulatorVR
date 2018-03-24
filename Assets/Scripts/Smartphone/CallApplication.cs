@@ -9,10 +9,13 @@ public class CallApplication : MonoBehaviour {
 	public Text contactName;
 	public Text callDuration;
 	public GameObject callingPanel;
+	public AudioClip freizeichen;
+	public AudioClip telefonatMama;
+	public AudioSource audioSource;
 
 	private int minutes = 0;
 	private float seconds = 0;
-	private bool momAlreadyCalled;
+	private bool momAlreadyCalled = false;
 	private bool onCall = false;
 	private string secondsText = "";
 	private string minutesText = "";
@@ -59,13 +62,26 @@ public class CallApplication : MonoBehaviour {
 				minutesText = "" + minutes;
 			}
 			callDuration.text = minutesText + secondsText;
+
+			if (!audioSource.isPlaying) {
+				EndCall ();
+			}
 		}
+			
 
 	}
 
 	void CallMom () {
 		callingPanel.SetActive (true);
 		onCall = true;
+		if (momAlreadyCalled) {
+			audioSource.clip = freizeichen;
+			audioSource.loop = true;
+		} else {
+			audioSource.clip = telefonatMama;
+			momAlreadyCalled = true;
+		}
+		audioSource.Play ();
 	}
 
 	void EndCall () {
@@ -73,5 +89,6 @@ public class CallApplication : MonoBehaviour {
 		onCall = false;
 		minutes = 0;
 		seconds = 0;
+		audioSource.Stop ();
 	}
 }
