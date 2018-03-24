@@ -16,11 +16,10 @@ public class StatusBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		seconds += Time.deltaTime * 60;
+		seconds += Time.deltaTime;
 		if (seconds > 59) {
 			minutes++;
 			seconds = 0f;
-			Debug.Log (hours + ":" + minutes);
 			if (minutes > 59) {
 				hours++;
 				minutes = 0;
