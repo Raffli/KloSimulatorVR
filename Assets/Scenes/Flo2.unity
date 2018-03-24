@@ -1150,6 +1150,9 @@ MonoBehaviour:
   tile2: {fileID: 466271489}
   homeScreen: {fileID: 653567960}
   gameOverScreen: {fileID: 1581058206}
+  music: {fileID: 8300000, guid: d8c2c1deb9a92d74a92906ac0f294477, type: 3}
+  poopDead: {fileID: 8300000, guid: c76a1f39166b4444999b333ea5c20683, type: 3}
+  audioSource: {fileID: 846249882}
 --- !u!1 &521275617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,6 +1487,8 @@ MonoBehaviour:
   poopFallerApp: {fileID: 675924873}
   poopFaller: {fileID: 521077108}
   telephoneApp: {fileID: 0}
+  click: {fileID: 8300000, guid: 08b6d08c2548b7d4096ac18b9f1a4178, type: 3}
+  audioSource: {fileID: 846249882}
 --- !u!1 &662237966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +1970,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 846249881}
+  - component: {fileID: 846249882}
   m_Layer: 0
   m_Name: SmartphoneObject
   m_TagString: Untagged
@@ -1987,6 +1993,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &846249882
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 846249880}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5fc546e60d85f414ea6d20b1d2363a1b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &908488004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,6 +3174,8 @@ MonoBehaviour:
   description: {fileID: 1125747316}
   liked: {fileID: 1445139914}
   disliked: {fileID: 2114345126}
+  click: {fileID: 8300000, guid: 08b6d08c2548b7d4096ac18b9f1a4178, type: 3}
+  audioSource: {fileID: 846249882}
   profilePictures:
   - {fileID: 21300000, guid: 9bbb12ef7206e3547b141dc2dacd984d, type: 3}
   - {fileID: 21300000, guid: 29f5eae8d147b7141aef1f3306f8450a, type: 3}
@@ -4318,6 +4406,8 @@ MonoBehaviour:
   messagePopup: {fileID: 373659780}
   message: {fileID: 804362170}
   smartphoneCanvas: {fileID: 509168043}
+  closeHandy: {fileID: 8300000, guid: c9a1d68fa150f0b4baf0d9f37ae4b4a2, type: 3}
+  audioSource: {fileID: 846249882}
 --- !u!1001 &1707755644
 Prefab:
   m_ObjectHideFlags: 0

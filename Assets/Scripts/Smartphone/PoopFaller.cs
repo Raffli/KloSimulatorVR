@@ -19,6 +19,9 @@ public class PoopFaller : MonoBehaviour {
     public GameObject homeScreen;
 
     public GameObject gameOverScreen;
+	public AudioClip music;
+	public AudioClip poopDead;
+	public AudioSource audioSource;
 
     private int position = 1;
     private int activeTile1 = 1;
@@ -33,6 +36,8 @@ public class PoopFaller : MonoBehaviour {
         NewTiles();
         play = true;
         background.SetActive(true);
+		audioSource.clip = music;
+		audioSource.loop = true;
     }
 
     // Update is called once per frame
@@ -107,6 +112,10 @@ public class PoopFaller : MonoBehaviour {
     }
 
     private void StartGameOver() {
+		audioSource.Stop ();
+		audioSource.loop = false;
+		audioSource.clip = poopDead;
+		audioSource.Play ();
         gameOverScreen.SetActive(true);
         play = false;
         StartCoroutine(DeathTime());
@@ -118,7 +127,6 @@ public class PoopFaller : MonoBehaviour {
         position = 1;
         homeScreen.SetActive(true);
         gameOverScreen.SetActive(false);
-
     }
 
     private void WurstiMove() {
