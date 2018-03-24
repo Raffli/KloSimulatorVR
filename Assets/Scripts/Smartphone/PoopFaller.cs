@@ -157,7 +157,7 @@ public class PoopFaller : MonoBehaviour {
 
             }
         }
-        wurstiObject.transform.localPosition = new Vector3(wurstiObject.transform.localPosition.x, wurstiObject.transform.localPosition.y - 0.003f, 0);
+        wurstiObject.transform.localPosition = new Vector3(wurstiObject.transform.localPosition.x, wurstiObject.transform.localPosition.y - 0.0035f, 0);
 
 
     }
