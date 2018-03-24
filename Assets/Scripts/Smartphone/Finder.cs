@@ -9,6 +9,8 @@ public class Finder : MonoBehaviour {
 	public GameObject profilePanel;
 	public GameObject welcomePanel;
 	public GameObject endPanel;
+	public GameObject getProButton;
+	public GameObject broke;
 	public Image profilePicture;
 	public Text nameAndAge;
 	public Text description;
@@ -34,6 +36,16 @@ public class Finder : MonoBehaviour {
 		if (Input.GetButtonDown ("Cancel")) {
 			applications.SetActive (true);
 			this.gameObject.SetActive (false);
+		}
+
+		if (endPanel.activeSelf) {
+			if (Input.GetButtonDown ("Vertical")) {
+				float moveY = Input.GetAxis ("Vertical");
+				if (moveY < 0) {
+					getProButton.SetActive (false);
+					broke.SetActive (true);
+				}
+			}
 		}
 	}
 

@@ -12,11 +12,13 @@ public class StatusBar : MonoBehaviour {
 
 	public Text timeText;
 	public Image batteryBar;
+	public GameObject messagePopup;
+	public Text message;
 	public GameObject smartphoneCanvas;
 	
 	// Update is called once per frame
 	void Update () {
-		seconds += Time.deltaTime;
+		seconds += Time.deltaTime * 15;
 		if (seconds > 59) {
 			minutes++;
 			seconds = 0f;
@@ -34,9 +36,17 @@ public class StatusBar : MonoBehaviour {
 			}
 			batteryLeft -= 0.01f;
 			if (batteryLeft < 0.01f) {
-				smartphoneCanvas.SetActive (false);
+				messagePopup.SetActive (true);
+				message.text = "Battery is dead!";
+				StartCoroutine (WaitForShutdown ());
+
 			}
 			batteryBar.fillAmount = batteryLeft;
 		}
+	}
+
+	IEnumerator WaitForShutdown () {
+		yield return new WaitForSeconds (3f);
+		smartphoneCanvas.SetActive (false);
 	}
 }
