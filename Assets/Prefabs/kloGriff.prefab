@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4095301616140212}
   - component: {fileID: 33994679921965926}
   - component: {fileID: 23183666495430360}
+  - component: {fileID: 65265784938314236}
   m_Layer: 0
   m_Name: kloGriff
   m_TagString: Untagged
@@ -82,3 +83,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1402446011189314}
   m_Mesh: {fileID: 4300000, guid: 7b614b28cdfc4ae43a3e3822c1443519, type: 3}
+--- !u!65 &65265784938314236
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1402446011189314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.350545, y: 6.0942173, z: 2.350524}
+  m_Center: {x: 0, y: -3.0471087, z: 0.0000014901161}
