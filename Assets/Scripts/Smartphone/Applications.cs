@@ -10,6 +10,7 @@ public class Applications : MonoBehaviour {
 	public GameObject poopFallerApp;
 	public PoopFaller poopFaller;
 	public GameObject telephoneApp;
+	public CallApplication telephone;
 	public AudioClip click;
 	public AudioSource audioSource;
 
@@ -22,7 +23,9 @@ public class Applications : MonoBehaviour {
 		float moveX = Input.GetAxis ("Horizontal");
 		float moveY = Input.GetAxis ("Vertical");
 		if (moveY < 0) {
-			Debug.Log ("DOWN");
+			telephoneApp.SetActive (true);
+			homeScreen.SetActive (false);
+			audioSource.Play ();
 		} else if (moveY > 0) {
 			
 		} else if (moveX < 0) {
