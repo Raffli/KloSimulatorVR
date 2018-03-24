@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 204f5b6d7a66d2745863cd50c93b9d29
-timeCreated: 1521925169
+guid: c6fe0ef0c29433f4fbf5b1464aea0a00
+timeCreated: 1521925231
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: klopapierPappe
+    2100002: Klopapier
     2300000: //RootNode
     3300000: //RootNode
-    4300000: geo_kloChainGlied
+    4300000: geo_kloPapier
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -42,7 +43,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 50
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
