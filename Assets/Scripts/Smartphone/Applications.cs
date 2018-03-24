@@ -8,6 +8,7 @@ public class Applications : MonoBehaviour {
 	public GameObject finderApp;
 	public Finder finder;
 	public GameObject poopFallerApp;
+	public PoopFaller poopFaller;
 	public GameObject telephoneApp;
 	
 	// Update is called once per frame
@@ -23,7 +24,11 @@ public class Applications : MonoBehaviour {
 			finder.StartApplication ();
 			homeScreen.SetActive (false);
 		} else if (moveX > 0) {
-			Debug.Log ("RIGHT");
+            poopFallerApp.SetActive(true);
+            poopFaller.StartApplication();
+            homeScreen.SetActive(false);
+
+            Debug.Log ("RIGHT");
 		}
 	}
 }
