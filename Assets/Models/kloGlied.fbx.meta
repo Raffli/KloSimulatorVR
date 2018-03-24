@@ -1,39 +1,18 @@
 fileFormatVersion: 2
-guid: f9e71c5a001a21145955ecce6a8143cc
-timeCreated: 1521920463
+guid: 6fbbcb17e7ab10c4c9f36aa049dd07e1
+timeCreated: 1521922833
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: geo_door
-    100002: geo_klinke
-    100004: //RootNode
-    400000: geo_door
-    400002: geo_klinke
-    400004: //RootNode
+    100000: //RootNode
+    400000: //RootNode
     2100000: lambert1
-    2100002: door_rhame
-    2300000: geo_door
-    2300002: geo_klinke
-    2300004: //RootNode
-    3300000: geo_door
-    3300002: geo_klinke
-    3300004: //RootNode
-    4300000: geo_room
-    4300002: geo_door
-    4300004: geo_klinke
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: geo_kloChainGlied
     9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: door_rhame
-    second: {fileID: 2100000, guid: 0adefc16d7f220b479b1e285f3d64c78, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: f381319adb3ffb54f9ea27f9008cef09, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
