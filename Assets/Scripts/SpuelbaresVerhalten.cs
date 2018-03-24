@@ -19,7 +19,13 @@ public class SpuelbaresVerhalten : MonoBehaviour {
         Debug.Log(col.name);
         if (col.name.Equals(toiletWaterCenterTrans.name))
         {
-            coroutine = FlushLikeArchimedes(col.GetComponents<Collider>()[1]);
+            Collider waterGround = col;
+            foreach(Collider collider in col.GetComponents<Collider>())
+            {
+                if (!collider.isTrigger) waterGround = collider;
+            }
+            Debug.Log(waterGround);
+            coroutine = FlushLikeArchimedes(waterGround);
             insideWater = true;
             GetComponent<Rigidbody>().drag *= dragIncreaseInsideWater;
         }
@@ -45,9 +51,17 @@ public class SpuelbaresVerhalten : MonoBehaviour {
             GetComponent<Rigidbody>().velocity = (nextPosition - transform.localPosition) * rotationSpeed * Time.deltaTime;
             
         }
+        yield return PassThroughFlushable(waterBottom);
+    }
+
+    IEnumerator PassThroughFlushable(Collider waterBottom)
+    {
         waterBottom.enabled = false;
+        Debug.Log(waterBottom);
         yield return new WaitForSeconds(1f);
         waterBottom.enabled = true;
+        Debug.Log(waterBottom.enabled);
+        yield return null;
     }
 
 }

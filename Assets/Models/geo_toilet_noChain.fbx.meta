@@ -1,30 +1,41 @@
 fileFormatVersion: 2
-guid: a83b7d32b1d985c4bb8ce6b34cc225b8
-timeCreated: 1521893291
+guid: 80f82a99b8276cb4e9d735210bec6535
+timeCreated: 1521923080
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
+    100000: geo_flushBox
     100002: geo_flushBoxHandle
-    100004: geo_kloChain
-    100006: geo_flushBox
-    400000: //RootNode
+    100004: geo_spuelRohr
+    100006: //RootNode
+    100008: geo_toiletglasses
+    100010: geo_toilettopping
+    400000: geo_flushBox
     400002: geo_flushBoxHandle
-    400004: geo_kloChain
-    400006: geo_flushBox
+    400004: geo_spuelRohr
+    400006: //RootNode
+    400008: geo_toiletglasses
+    400010: geo_toilettopping
     2100000: lambert1
-    2300000: //RootNode
+    2300000: geo_flushBox
     2300002: geo_flushBoxHandle
-    2300004: geo_kloChain
-    2300006: geo_flushBox
-    3300000: //RootNode
+    2300004: geo_spuelRohr
+    2300006: //RootNode
+    2300008: geo_toiletglasses
+    2300010: geo_toilettopping
+    3300000: geo_flushBox
     3300002: geo_flushBoxHandle
-    3300004: geo_kloChain
-    3300006: geo_flushBox
-    4300000: geo_flushBox
-    4300002: geo_flushBoxHandle
-    4300004: geo_kloChain
+    3300004: geo_spuelRohr
+    3300006: //RootNode
+    3300008: geo_toiletglasses
+    3300010: geo_toilettopping
+    4300000: geo_toilet
+    4300002: geo_toiletglasses
+    4300004: geo_toilettopping
+    4300006: geo_flushBox
+    4300008: geo_flushBoxHandle
+    4300010: geo_spuelRohr
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -56,7 +67,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

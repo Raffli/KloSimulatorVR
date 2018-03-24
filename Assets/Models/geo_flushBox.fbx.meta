@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a83b7d32b1d985c4bb8ce6b34cc225b8
-timeCreated: 1521893291
+guid: cafbc29dd48bc27408a3ca9c5de512ff
+timeCreated: 1521917519
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,23 +8,24 @@ ModelImporter:
     100000: //RootNode
     100002: geo_flushBoxHandle
     100004: geo_kloChain
-    100006: geo_flushBox
+    100006: geo_spuelRohr
     400000: //RootNode
     400002: geo_flushBoxHandle
     400004: geo_kloChain
-    400006: geo_flushBox
+    400006: geo_spuelRohr
     2100000: lambert1
     2300000: //RootNode
     2300002: geo_flushBoxHandle
     2300004: geo_kloChain
-    2300006: geo_flushBox
+    2300006: geo_spuelRohr
     3300000: //RootNode
     3300002: geo_flushBoxHandle
     3300004: geo_kloChain
-    3300006: geo_flushBox
+    3300006: geo_spuelRohr
     4300000: geo_flushBox
     4300002: geo_flushBoxHandle
     4300004: geo_kloChain
+    4300006: geo_spuelRohr
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -56,7 +57,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 50
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
