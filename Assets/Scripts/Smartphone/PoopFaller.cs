@@ -52,8 +52,8 @@ public class PoopFaller : MonoBehaviour {
     }
 
     private void NewTiles() {
-        activeTile1 = Random.RandomRange(0, 2);
-        activeTile2 = Random.RandomRange(0, 2);
+        activeTile1 = Random.RandomRange(0, 3);
+        activeTile2 = Random.RandomRange(0, 3);
         if (activeTile1 == 0) {
             tile1.sprite = abflussLinks;
         } else if (activeTile1 == 1) {
@@ -157,7 +157,7 @@ public class PoopFaller : MonoBehaviour {
 
             }
         }
-        wurstiObject.transform.localPosition = new Vector3(wurstiObject.transform.localPosition.x, wurstiObject.transform.localPosition.y - 0.005f, 0);
+        wurstiObject.transform.localPosition = new Vector3(wurstiObject.transform.localPosition.x, wurstiObject.transform.localPosition.y - 0.003f, 0);
 
 
     }
