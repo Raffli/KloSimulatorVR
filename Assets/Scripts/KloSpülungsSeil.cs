@@ -12,37 +12,40 @@ public class KloSpülungsSeil : MonoBehaviour {
 
     internal void Start()
     {
-
-
         this.gameObject.AddComponent<Rigidbody>();
         this.RBody = this.gameObject.GetComponent<Rigidbody>();
         this.RBody.isKinematic = true;
-        GameObject lastTemp = this.transform.gameObject;
-        for (int i = 0; i < 22; i++)
+        GameObject lastTemp = this.transform.GetChild(0).transform.gameObject;
+        for (float i = 0; i < 22; i++)
         {
             GameObject temp;
-            if (i == 22 - 1)
+            if (i == 21)
             {
                 temp = Instantiate(handle, new Vector3(0,0, 0), Quaternion.identity);
                 temp.transform.parent = lastTemp.transform;
-                temp.transform.localPosition = new Vector3(0, -(i / 3f) - 0.2f, 0);
+                temp.transform.localScale = new Vector3(1, 1, 1);
+                temp.transform.localPosition = new Vector3(0, - 1.4f, 0);
 
             }
             else {
                 temp = Instantiate(chainPart, new Vector3(0, 0, 0), Quaternion.identity);
                 temp.transform.parent = lastTemp.transform;
-                temp.transform.localPosition = new Vector3(0, -(i / 3f), 0);
-            }
-            temp.GetComponent<BoxCollider>().enabled = false;
+                temp.transform.localScale = new Vector3(1, 1, 1);
+                temp.transform.localPosition = new Vector3(0, -1.2f, 0);
 
-            temp.transform.gameObject.AddComponent<HingeJoint>();
-            HingeJoint hinge = temp.gameObject.GetComponent<HingeJoint>();
-            hinge.connectedBody = i == 0 ? this.RBody : lastTemp.GetComponent<Rigidbody>();
-            hinge.massScale = 0.01f;
-            //hinge.useSpring = true;
+            }
+
+            temp.transform.gameObject.AddComponent<FixedJoint>();
+            FixedJoint hinge = temp.gameObject.GetComponent<FixedJoint>();
+            hinge.connectedBody = i == 0 ? this.transform.GetChild(0).GetComponent<Rigidbody>() : lastTemp.GetComponent<Rigidbody>();
+            hinge.massScale = 1.1f;
             hinge.enableCollision = true;
-            temp.GetComponent<BoxCollider>().enabled = true;
+            //hinge.spring = 10;
+
+            //temp.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            
             lastTemp = temp;
+            temp = null;
         }
     }
 }
