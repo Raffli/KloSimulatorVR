@@ -1,16 +1,17 @@
 fileFormatVersion: 2
-guid: 7b614b28cdfc4ae43a3e3822c1443519
-timeCreated: 1521925362
+guid: c6fe0ef0c29433f4fbf5b1464aea0a00
+timeCreated: 1521925231
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: lambert1
+    2100000: klopapierPappe
+    2100002: Klopapier
     2300000: //RootNode
     3300000: //RootNode
-    4300000: geo_kloChainHandle
+    4300000: geo_kloPapier
     9500000: //RootNode
   externalObjects: {}
   materials:

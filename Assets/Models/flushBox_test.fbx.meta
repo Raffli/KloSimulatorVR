@@ -8,16 +8,20 @@ ModelImporter:
     100000: //RootNode
     100002: geo_flushBoxHandle
     100004: geo_kloChain
+    100006: geo_flushBox
     400000: //RootNode
     400002: geo_flushBoxHandle
     400004: geo_kloChain
+    400006: geo_flushBox
     2100000: lambert1
     2300000: //RootNode
     2300002: geo_flushBoxHandle
     2300004: geo_kloChain
+    2300006: geo_flushBox
     3300000: //RootNode
     3300002: geo_flushBoxHandle
     3300004: geo_kloChain
+    3300006: geo_flushBox
     4300000: geo_flushBox
     4300002: geo_flushBoxHandle
     4300004: geo_kloChain

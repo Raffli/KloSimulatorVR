@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class KloSpülungsSeil : MonoBehaviour {
 
+    public GameObject chainPart;
+    public GameObject handle;
+    public GameObject spawnPoint;
+
     internal Rigidbody RBody;
+
     internal void Start()
     {
 
@@ -12,26 +17,32 @@ public class KloSpülungsSeil : MonoBehaviour {
         this.gameObject.AddComponent<Rigidbody>();
         this.RBody = this.gameObject.GetComponent<Rigidbody>();
         this.RBody.isKinematic = true;
-        int childCount = this.transform.childCount;
-        for (int i = 0; i < childCount; i++)
+        GameObject lastTemp = this.transform.gameObject;
+        for (int i = 0; i < 22; i++)
         {
-            Transform t = this.transform.GetChild(i);
-            t.GetComponent<BoxCollider>().enabled = false;
-            if (i == childCount - 1) {
-                t.localPosition = new Vector3(0, - (i/9f) - 0.1f, 0);
-            }
-            else
-                t.localPosition = new Vector3(0,- (i/9f),0);
+            GameObject temp;
+            if (i == 22 - 1)
+            {
+                temp = Instantiate(handle, new Vector3(0,0, 0), Quaternion.identity);
+                temp.transform.parent = lastTemp.transform;
+                temp.transform.localPosition = new Vector3(0, -(i / 3f) - 0.2f, 0);
 
-            Debug.Log(t.localPosition.y);
-            t.gameObject.AddComponent<HingeJoint>();
-            HingeJoint hinge = t.gameObject.GetComponent<HingeJoint>();
-            hinge.connectedBody = i == 0 ? this.RBody : this.transform.GetChild(i - 1).GetComponent<Rigidbody>();
-            
+            }
+            else {
+                temp = Instantiate(chainPart, new Vector3(0, 0, 0), Quaternion.identity);
+                temp.transform.parent = lastTemp.transform;
+                temp.transform.localPosition = new Vector3(0, -(i / 3f), 0);
+            }
+            temp.GetComponent<BoxCollider>().enabled = false;
+
+            temp.transform.gameObject.AddComponent<HingeJoint>();
+            HingeJoint hinge = temp.gameObject.GetComponent<HingeJoint>();
+            hinge.connectedBody = i == 0 ? this.RBody : lastTemp.GetComponent<Rigidbody>();
+            hinge.massScale = 0.01f;
             //hinge.useSpring = true;
             hinge.enableCollision = true;
-            t.GetComponent<BoxCollider>().enabled = true;
-
+            temp.GetComponent<BoxCollider>().enabled = true;
+            lastTemp = temp;
         }
     }
 }

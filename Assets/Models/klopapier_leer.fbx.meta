@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 7b614b28cdfc4ae43a3e3822c1443519
-timeCreated: 1521925362
+guid: 8ca6634a822dbd343aad9cee6c2f0b8d
+timeCreated: 1521925231
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -10,7 +10,7 @@ ModelImporter:
     2100000: lambert1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: geo_kloChainHandle
+    4300000: geo_kloPapierLeer
     9500000: //RootNode
   externalObjects: {}
   materials:
