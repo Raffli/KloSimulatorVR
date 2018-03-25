@@ -24,8 +24,6 @@ public class DiscoDisco : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("discodisco");
-
     }
 	// Use this for initialization
 	void Start () {

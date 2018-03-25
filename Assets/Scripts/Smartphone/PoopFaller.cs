@@ -35,6 +35,7 @@ public class PoopFaller : MonoBehaviour {
 
     public void StartApplication()
     {
+        Debug.Log("StartApplication");
         NewTiles();
         play = true;
         background.SetActive(true);
@@ -131,12 +132,14 @@ public class PoopFaller : MonoBehaviour {
         wurstiObject.transform.localPosition = new Vector3(-0.02f, 0.8f, 0);
         position = 1;
         homeScreen.SetActive(true);
+        homeScreen.GetComponent<Applications>().SetAc(true);
         gameOverScreen.SetActive(false);
     }
 
     private void WurstiMove() {
-        bool pressed = Input.GetButtonDown("Horizontal");
-        if (pressed)
+        bool left = Input.GetKeyDown(KeyCode.JoystickButton8);
+
+        if (left)
         {
 			gameAudioSource.Play ();
             float moveX = Input.GetAxis("Horizontal");

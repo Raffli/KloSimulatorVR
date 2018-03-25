@@ -31,15 +31,12 @@ public class RandomDoorEvents : MonoBehaviour {
 	}
 
 	private void PlayDoorSound () {
-		Debug.Log ("door sound");
 		hasPlayed = true;
 		audioSource.clip = doorSound;
 		audioSource.Play ();
-		//Play Animation here
 	}
 
 	private void PlayRandomPersonEvent (){
-		Debug.Log ("person sound");
 		int randomEvent = Random.Range (0, personsKnocking.Length);
 		audioSource.clip = personsKnocking[randomEvent];
 		audioSource.Play ();
@@ -48,7 +45,6 @@ public class RandomDoorEvents : MonoBehaviour {
 
 	IEnumerator WaitForRandomSeconds () {
 		float randomWaitTime = Random.Range (minWait, maxWait);
-		Debug.Log ("waiting " + randomWaitTime + " seconds");
         dudespeacks.dudeSpeaks = false;
         yield return new WaitForSeconds (randomWaitTime);
         dudespeacks.dudeSpeaks = true;

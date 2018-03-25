@@ -14,40 +14,54 @@ public class Applications : MonoBehaviour {
 	public AudioClip click;
 	public AudioSource audioSource;
 
-    public bool onHand;
+    public bool aktive = true;
 
 	void OnEnable () {
 		audioSource.clip = click;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-            float moveX = Input.GetAxis("Horizontal");
-            float moveY = Input.GetAxis("Vertical");
-            if (moveY < 0)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (aktive)
+        {
+            bool left = Input.GetKeyDown(KeyCode.JoystickButton8);
+            bool down = Input.GetKeyDown(KeyCode.JoystickButton2);
+
+            if (left)
+            {
+                float moveX = Input.GetAxis("Horizontal");
+                if (moveX < 0)
+                {
+
+                    finderApp.SetActive(true);
+                    finder.StartApplication();
+                    audioSource.Play();
+                    aktive = false;
+                    homeScreen.SetActive(false);
+                }
+                else if (moveX > 0)
+                {
+                    poopFallerApp.SetActive(true);
+                    poopFaller.StartApplication();
+                    audioSource.Play();
+                    aktive = false;
+
+                    homeScreen.SetActive(false);
+                }
+            }
+            else if (down)
             {
                 telephoneApp.SetActive(true);
-                homeScreen.SetActive(false);
                 audioSource.Play();
+                homeScreen.SetActive(false);
+                aktive = false;
             }
-            else if (moveY > 0)
-            {
 
-            }
-            else if (moveX < 0)
-            {
-                finderApp.SetActive(true);
-                finder.StartApplication();
-                homeScreen.SetActive(false);
-                audioSource.Play();
-            }
-            else if (moveX > 0)
-            {
-                poopFallerApp.SetActive(true);
-                poopFaller.StartApplication();
-                homeScreen.SetActive(false);
-                Debug.Log(homeScreen.active);
-                audioSource.Play();
         }
-	}
+    }
+
+    public void SetAc(bool ac) {
+        aktive = ac;
+    }
 }
