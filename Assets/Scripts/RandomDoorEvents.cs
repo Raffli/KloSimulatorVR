@@ -9,6 +9,7 @@ public class RandomDoorEvents : MonoBehaviour {
 	public AudioSource audioSource;
 	public float minWait;
 	public float maxWait;
+    public DiscoDisco dudespeacks;
 
 	private bool hasPlayed = false;
 	private bool doorUsed = false;
@@ -48,8 +49,10 @@ public class RandomDoorEvents : MonoBehaviour {
 	IEnumerator WaitForRandomSeconds () {
 		float randomWaitTime = Random.Range (minWait, maxWait);
 		Debug.Log ("waiting " + randomWaitTime + " seconds");
-		yield return new WaitForSeconds (randomWaitTime);
-		PlayDoorSound ();
+        dudespeacks.dudeSpeaks = false;
+        yield return new WaitForSeconds (randomWaitTime);
+        dudespeacks.dudeSpeaks = true;
+        PlayDoorSound ();
 	}
 
 }

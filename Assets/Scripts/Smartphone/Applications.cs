@@ -46,6 +46,7 @@ public class Applications : MonoBehaviour {
                 poopFallerApp.SetActive(true);
                 poopFaller.StartApplication();
                 homeScreen.SetActive(false);
+                Debug.Log(homeScreen.active);
                 audioSource.Play();
         }
 	}

@@ -27,11 +27,4 @@ public class Flusher : MonoBehaviour {
     {
         toiletteWater.GetComponent<FlushingWater>().flush();
     }
-
-    private void Update()
-    {
-        
-    }
-
-
 }

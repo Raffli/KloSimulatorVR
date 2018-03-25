@@ -39,6 +39,7 @@ public class FlushingWater : MonoBehaviour {
 
     IEnumerator FlushLikeArchimedes(Transform objTransInWater)
     {
+        GetComponent<ParticleSystem>().Play();
         objTransInWater.parent = this.transform;
         while (isFlushing)
         {
