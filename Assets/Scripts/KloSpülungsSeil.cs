@@ -38,7 +38,7 @@ public class KloSpülungsSeil : MonoBehaviour {
             temp.transform.gameObject.AddComponent<FixedJoint>();
             FixedJoint hinge = temp.gameObject.GetComponent<FixedJoint>();
             hinge.connectedBody = i == 0 ? this.transform.GetChild(0).GetComponent<Rigidbody>() : lastTemp.GetComponent<Rigidbody>();
-            hinge.massScale = 1.2f;
+            hinge.massScale = 1.1f;
             hinge.enableCollision = true;
             //hinge.spring = 10;
 

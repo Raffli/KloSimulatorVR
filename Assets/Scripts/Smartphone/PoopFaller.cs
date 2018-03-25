@@ -21,7 +21,9 @@ public class PoopFaller : MonoBehaviour {
     public GameObject gameOverScreen;
 	public AudioClip music;
 	public AudioClip poopDead;
+	public AudioClip poopSwipe;
 	public AudioSource audioSource;
+	public AudioSource gameAudioSource;
 
     private int position = 1;
     private int activeTile1 = 1;
@@ -38,6 +40,7 @@ public class PoopFaller : MonoBehaviour {
         background.SetActive(true);
 		audioSource.clip = music;
 		audioSource.loop = true;
+		gameAudioSource.clip = poopSwipe;
     }
 
     // Update is called once per frame
@@ -133,6 +136,7 @@ public class PoopFaller : MonoBehaviour {
         bool pressed = Input.GetButtonDown("Horizontal");
         if (pressed)
         {
+			gameAudioSource.Play ();
             float moveX = Input.GetAxis("Horizontal");
             if (moveX < 0)
             {
