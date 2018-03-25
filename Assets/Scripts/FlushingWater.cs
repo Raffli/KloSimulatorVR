@@ -55,7 +55,4 @@ public class FlushingWater : MonoBehaviour {
         Debug.Log(waterBottom.enabled);
         yield return null;
     }
-
-}
-
 }
