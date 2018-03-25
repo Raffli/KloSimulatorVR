@@ -140,7 +140,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -221,10 +221,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d33123df5642740ad500e0936e2a55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorSound: {fileID: 8300000, guid: 04bfc2ef38759b142983e045a6765a5d, type: 3}
+  doorSound: {fileID: 8300000, guid: ee01bff3760b543cdb5d30570cb7e8f2, type: 3}
   personsKnocking:
-  - {fileID: 8300000, guid: 7b027bd851cbd4244bda6f51cb268b8d, type: 3}
-  - {fileID: 8300000, guid: 38c3ac9c3e3af7446908ac30109d0672, type: 3}
+  - {fileID: 8300000, guid: 199ecd06bc76b43868630cd0e5717f37, type: 3}
+  - {fileID: 8300000, guid: 37d9a353b6cc148e79d7e60f13782001, type: 3}
+  - {fileID: 8300000, guid: fcac8954c9d234e6f88913f01ffcfc9b, type: 3}
+  - {fileID: 8300000, guid: 1a03ce62e6c1241fb8f1d43a7b9f8c95, type: 3}
+  - {fileID: 8300000, guid: caf835f9191c347dfab9daa4f3d23a7f, type: 3}
+  - {fileID: 8300000, guid: 1c5417bd0db37446abb69db6079766f5, type: 3}
+  - {fileID: 8300000, guid: 7a411d01de6924359a7564a80ab7edc7, type: 3}
+  - {fileID: 8300000, guid: d454e21e066324c408f7e2a773db7570, type: 3}
+  - {fileID: 8300000, guid: 0969d83b6dcee4a0cb2de01d1ff7b40e, type: 3}
+  - {fileID: 8300000, guid: 715aa992d0f5f4c91b9f223ae47533d8, type: 3}
   audioSource: {fileID: 28385922}
   minWait: 30
   maxWait: 60
@@ -1418,8 +1426,8 @@ MonoBehaviour:
   homeScreen: {fileID: 653567960}
   gameOverScreen: {fileID: 1581058206}
   music: {fileID: 8300000, guid: 7b027bd851cbd4244bda6f51cb268b8d, type: 3}
-  poopDead: {fileID: 8300000, guid: c76a1f39166b4444999b333ea5c20683, type: 3}
-  poopSwipe: {fileID: 8300000, guid: 9081fa3b864561a40b2cd2b9535d9a49, type: 3}
+  poopDead: {fileID: 8300000, guid: fc4b85c1d6a5749dbb97f22732276eff, type: 3}
+  poopSwipe: {fileID: 8300000, guid: a1dc631835c304aa985bf52366bdf9fb, type: 3}
   audioSource: {fileID: 846249882}
   gameAudioSource: {fileID: 521077109}
 --- !u!82 &521077109
@@ -1433,7 +1441,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1878,7 +1886,7 @@ MonoBehaviour:
   poopFaller: {fileID: 521077108}
   telephoneApp: {fileID: 2078697740}
   telephone: {fileID: 0}
-  click: {fileID: 8300000, guid: 08b6d08c2548b7d4096ac18b9f1a4178, type: 3}
+  click: {fileID: 8300000, guid: afad015b752034d5d9ef72bf8a36dfce, type: 3}
   audioSource: {fileID: 846249882}
 --- !u!1 &662237966
 GameObject:
@@ -2395,7 +2403,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5fc546e60d85f414ea6d20b1d2363a1b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3849,7 +3857,7 @@ MonoBehaviour:
   description: {fileID: 1125747316}
   liked: {fileID: 1445139914}
   disliked: {fileID: 2114345126}
-  click: {fileID: 8300000, guid: 08b6d08c2548b7d4096ac18b9f1a4178, type: 3}
+  click: {fileID: 8300000, guid: afad015b752034d5d9ef72bf8a36dfce, type: 3}
   audioSource: {fileID: 846249882}
   profilePictures:
   - {fileID: 21300000, guid: 9bbb12ef7206e3547b141dc2dacd984d, type: 3}
@@ -5155,7 +5163,7 @@ MonoBehaviour:
   messagePopup: {fileID: 373659780}
   message: {fileID: 804362170}
   smartphoneCanvas: {fileID: 509168043}
-  closeHandy: {fileID: 8300000, guid: c9a1d68fa150f0b4baf0d9f37ae4b4a2, type: 3}
+  closeHandy: {fileID: 8300000, guid: afad015b752034d5d9ef72bf8a36dfce, type: 3}
   audioSource: {fileID: 846249882}
 --- !u!1 &1628924394
 GameObject:
@@ -6871,8 +6879,8 @@ MonoBehaviour:
   contactName: {fileID: 1279030127}
   callDuration: {fileID: 1019215177}
   callingPanel: {fileID: 583562486}
-  freizeichen: {fileID: 8300000, guid: 04bfc2ef38759b142983e045a6765a5d, type: 3}
-  telefonatMama: {fileID: 8300000, guid: 38c3ac9c3e3af7446908ac30109d0672, type: 3}
+  freizeichen: {fileID: 8300000, guid: 02fac489bdb9047b4a223cf7e7121a81, type: 3}
+  telefonatMama: {fileID: 8300000, guid: e4cadb155959241189757691a3cac174, type: 3}
   audioSource: {fileID: 846249882}
 --- !u!1 &2091269862
 GameObject:
