@@ -7,4 +7,10 @@ public class HeldObject : MonoBehaviour
 {
     [HideInInspector]
     public Controller parent;
+
+    private void Update()
+    {
+            
+        
+    }
 }

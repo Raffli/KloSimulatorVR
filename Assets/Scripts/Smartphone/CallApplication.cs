@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Valve.VR.InteractionSystem;
 
 public class CallApplication : MonoBehaviour {
 
@@ -39,7 +40,7 @@ public class CallApplication : MonoBehaviour {
 			}				
 		}
 
-		if (Input.GetButtonDown ("Cancel")) {
+		if (Input.GetButtonDown("Cancel")) {
 			applications.SetActive (true);
 			this.gameObject.SetActive (false);
 		}
