@@ -40,7 +40,9 @@ public class PoopFaller : MonoBehaviour {
         background.SetActive(true);
 		audioSource.clip = music;
 		audioSource.loop = true;
+		audioSource.volume = 0.2f;
 		gameAudioSource.clip = poopSwipe;
+		gameAudioSource.volume = 0.5f;
     }
 
     // Update is called once per frame
