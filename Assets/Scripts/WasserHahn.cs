@@ -7,7 +7,7 @@ public class WasserHahn : MonoBehaviour
 
     public GameObject hahn;
     public GameObject wasser;
-    private bool aktiv;
+    private bool aktiv = true;
 
     private float bs = 100;
 
@@ -21,11 +21,15 @@ public class WasserHahn : MonoBehaviour
         set
         {
             aktiv = value;
-            SetAktiv(aktiv);
-            StartCoroutine(Counter());
+            
         }
     }
 
+    void Start()
+    {
+        SetAktiv(aktiv);
+        StartCoroutine(Counter());
+    }
     // Update is called once per frame
     void Update () {
 
