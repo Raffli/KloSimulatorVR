@@ -14,6 +14,11 @@ public class FlushingWater : MonoBehaviour {
     private Vector3 nextPosition;
     private float rotationStep = 12f;           // In degrees
 
+    private void Start()
+    {
+        colliders = new List<Collider>();
+    }
+
     public void flush()
     {
         foreach(Collider col in colliders)
