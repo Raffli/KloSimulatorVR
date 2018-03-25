@@ -224,7 +224,7 @@ MonoBehaviour:
   doorSound: {fileID: 8300000, guid: 04bfc2ef38759b142983e045a6765a5d, type: 3}
   personsKnocking:
   - {fileID: 8300000, guid: 7b027bd851cbd4244bda6f51cb268b8d, type: 3}
-  - {fileID: 8300000, guid: 38c3ac9c3e3af7446908ac30109d0672, type: 3}
+  - {fileID: 0}
   audioSource: {fileID: 28385922}
   minWait: 30
   maxWait: 60
@@ -1418,8 +1418,8 @@ MonoBehaviour:
   homeScreen: {fileID: 653567960}
   gameOverScreen: {fileID: 1581058206}
   music: {fileID: 8300000, guid: 7b027bd851cbd4244bda6f51cb268b8d, type: 3}
-  poopDead: {fileID: 8300000, guid: c76a1f39166b4444999b333ea5c20683, type: 3}
-  poopSwipe: {fileID: 8300000, guid: 9081fa3b864561a40b2cd2b9535d9a49, type: 3}
+  poopDead: {fileID: 8300000, guid: fc4b85c1d6a5749dbb97f22732276eff, type: 3}
+  poopSwipe: {fileID: 8300000, guid: a1dc631835c304aa985bf52366bdf9fb, type: 3}
   audioSource: {fileID: 846249882}
   gameAudioSource: {fileID: 521077109}
 --- !u!82 &521077109
