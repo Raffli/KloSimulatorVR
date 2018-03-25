@@ -1289,7 +1289,7 @@ MonoBehaviour:
   tile2: {fileID: 466271489}
   homeScreen: {fileID: 653567960}
   gameOverScreen: {fileID: 1581058206}
-  music: {fileID: 8300000, guid: d8c2c1deb9a92d74a92906ac0f294477, type: 3}
+  music: {fileID: 8300000, guid: 7b027bd851cbd4244bda6f51cb268b8d, type: 3}
   poopDead: {fileID: 8300000, guid: c76a1f39166b4444999b333ea5c20683, type: 3}
   poopSwipe: {fileID: 8300000, guid: 9081fa3b864561a40b2cd2b9535d9a49, type: 3}
   audioSource: {fileID: 846249882}
